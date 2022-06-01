@@ -6,9 +6,10 @@ namespace DeliveryServiceApi.Controllers
     [Controller]
     public class DeliveryController : Controller
     {
-        public IActionResult Index()
+        [HttpGet(template:"check-status")]
+        public IActionResult CheckStatus()
         {
-            return View();
+            return Ok("Active");
         }
     }
 }
